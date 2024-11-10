@@ -1,10 +1,114 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
-
 <Layout title="Über mich">
-    <main>
-        <p style="color: #000">ueber-mich works!</p>
-    </main>
+  <main>
+    <div class="wrapper">
+        <h1>Über mich</h1>
+        <h2>Kindheit, Jugend und Familie</h2>
+        <p>
+          Die Westküste ist meine Heimat. Hier wurde ich 1994 geboren, hier bin ich
+          aufgewachsen, habe eine Familie gegründet und engagiere mich seit vielen
+          Jahren ehrenamtlich in und außerhalb der Kommunalpolitik.
+        </p>
+        <p>
+          Nachdem ich die ersten Jahre meiner Kindheit in Husum verbracht habe, lebe
+          ich mit einer zweijährigen Unterbrechung während meines Studiums seit ca.
+          25 Jahren nun mit meiner Frau, unserem zweijährigen Sohn und zwei Katern
+          in Mildstedt.
+        </p>
+        <p>
+          Dort bin ich in den Kindergarten und zur Grundschule gegangen, um dann
+          2013 an der Hermann-Tast-Schule in Husum mein Abitur abzulegen.
+        </p>
+        <h2>Ausbildung und Beruf</h2>
+        <p>
+          Wie viele jungen Leute war ich mir nach der Schule unsicher, wohin mich
+          mein weiterer Weg führen soll. So habe ich schließlich ein Freiwilliges
+          Soziales Jahr (FSJ) bei den Husumer Horizonten – Einrichtungen für
+          Menschen mit Behinderungen gemacht. Dieses Arbeitsfeld auszuprobieren war
+          eine goldrichtige Entscheidung, hatte sie doch großen Einfluss auf mein
+          weiteres berufliches Leben.
+        </p>
+        <p>
+          Inzwischen bin ich Sozialarbeiter/Sozialpädagoge mit staatlicher
+          Anerkennung und einem abgeschlossenen Masterstudium (Forschung,
+          Entwicklung und Management in Sozialer Arbeit) und wieder bei den vom
+          Kirchenkreis Nordfriesland getragenen Husumer Horizonten beschäftigt.
+        </p>
+        <p>
+          Diese Ausbildung mit hervorragenden Jobmöglichkeiten und einem
+          Rückkehrrecht in den öffentlichen Dienst verschaffen mir die notwendige
+          Unabhängigkeit, ein Bundestagsmandat allein an der Sache orientiert
+          auszuüben.. Eine solche Unabhängigkeit finde ich sehr wichtig.
+        </p>
+        <p>
+          Außerdem darf ich unseren Landtagsabgeordneten Marc Timmer als
+          wissenschaftlichen Mitarbeiter unterstützen.
+        </p>
+        <h2>Kommunalpolitik</h2>
+        <p>
+          Ich bringe bereits einiges an kommunalpolitischer Erfahrung mit. Bei den
+          Kommunalwahlen 2018 und 2023 wurde ich jeweils direkt in den
+          nordfriesischen Kreistag und in die Gemeindevertretung von Mildstedt
+          gewählt. Mein Wahlkreissieg 2023 war das einzige Direktmandat für die SPD
+          in einem Kreis oder einer kreisfreien Stadt nördlich von Eckernförde und
+          Friedrichskoog.
+        </p>
+        <p>
+          Mit Beginn der laufenden Wahlperiode wurde ich Vorsitzender der
+          SPD-Kreistagsfraktion und Vorsitzender des Finanz- und
+          Wirtschaftsausschusses der Gemeinde Mildstedt - zwei Ämter, die ich sehr
+          gerne und mit viel Leidenschaft ausfülle. Zuvor war ich u.a. zwei Jahre
+          Vorsitzender der SPD Nordfriesland. Ich bin also mit den konkreten
+          Herausforderungen unserer Region und den Problemen vor Ort bestens
+          vertraut. Diese Erfahrungen, aber auch den Spaß an der Politik möchte ich
+          von der Westküste mit nach Berlin nehmen.
+        </p>
+        <p>
+          Als jemand, der gerade eine Familie gegründet hat und sich gemeinsam mit
+          seiner Ehefrau etwas aufbaut, war und bin ich aber auch ganz praktisch mit
+          den Herausforderungen des Alltags konfrontiert – sei es die Vereinbarkeit
+          von Familie, Ehrenamt und Beruf, seien es unsere viel zu komplizierte
+          Bürokratie (wie z.B. beim Elterngeld und beim Hausbau) oder die
+          gestiegenen Preise in fast allen Bereichen. Als Kommunalpolitiker und
+          Bürger kriege ich also genau mit, wie in Berlin getroffene Entscheidungen
+          praktisch wirken. Da geht vieles besser. Dazu möchte ich meinen Teil
+          beitragen.
+        </p>
+        <h2>Hobbies</h2>
+        <p>
+          Meine Freizeit verbringe ich gerne mit Sport, als Zuschauer und auch
+          aktiv. Ich jogge gerne (für einen zweiten Marathon langt es aktuell leider
+          nicht mehr) und bin seit 2006 Schiedsrichter im Fußball. Für sechs Jahre
+          habe ich Spiele in der Oberliga geleitet. Mit zunehmenden Aufgaben in der
+          Politik bin ich dort kürzergetreten und pfeife jetzt nur noch ab und an
+          Spiele auf Kreisebene.
+        </p>
+    </div>
+  </main>
 </Layout>
+
+<style>
+    main{
+        background-position-y: top;
+        background-image: linear-gradient(165deg,
+        var(--white) 150px,
+        var(--red) 150px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--red);
+        padding: 24px 0;
+    }
+    h1{
+        padding-top: 16px;
+    }
+    .wrapper{
+        background-color: var(--white);
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0 0 0.75px var(--black);
+        border-radius: 16px;
+    }
+</style>

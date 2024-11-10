@@ -1,0 +1,94 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  text: string;
+  fbLink?: string;
+  instaLink?: string;
+  waLink?: string;
+  mailLink?: string;
+}
+
+const { title, date, text } = Astro.props;
+---
+
+<div class="article">
+  <div class="article__wrapper">
+    <h2 class="headline">{title}</h2>
+    <p class="date">{date}</p>
+    <p class="text">{text}</p>
+    <h4>Teile diesen Beitrag:</h4>
+    <div class="cta__container">
+      <div class="cta__btn">
+        <img
+          src="/assets/icons/SPD_Facebook_rot-frei_RGB.svg"
+          alt="Facebook Icon"
+          class="icon"
+        />Facebook
+      </div>
+      <div class="cta__btn">
+        <img
+          src="/assets/icons/SPD_Instagram_rot-frei_RGB.svg"
+          alt="Instagram Icon"
+          class="icon"
+        />Instagram
+      </div>
+      <div class="cta__btn">
+        <img
+          src="/assets/icons/SPD_Whatsapp_rot-frei_RGB.svg"
+          alt="WhatsApp Icon"
+          class="icon"
+        />WhatsApp
+      </div>
+      <div class="cta__btn">
+        <img
+          src="/assets/icons/SPD_E-Mail_rot-frei_RGB.svg"
+          alt="Mail Icon"
+          class="icon"
+        />Mail
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .article {
+    padding: 8px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .article__wrapper {
+    border-left: 4px solid var(--red);
+  }
+  .headline {
+    text-align: left;
+    padding: 0 16px;
+  }
+  .date {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .text {
+    max-width: 60ch;
+    text-align: justify;
+    hyphens: auto;
+  }
+  .cta__container {
+    display: grid;
+    grid-template-columns: 125px 125px;
+    justify-content: center;
+    gap: 16px;
+  }
+  .cta__btn {
+    padding: 16px;
+    border: 2px solid var(--red);
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    height: 15px;
+    width: 15px;
+    margin-right: 8px;
+  }
+</style>

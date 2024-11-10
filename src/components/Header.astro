@@ -35,6 +35,9 @@ const currentPath = Astro.url.pathname;
         <a class={`header-nav-link ${currentPath === "/" ? "active" : ""}`} href="/">Startseite</a>
       </li>
       <li>
+        <a class={`header-nav-link ${currentPath === "/aktuelles/" ? "active" : ""}`} href="/aktuelles/">Aktuelles</a>
+      </li>
+      <li>
         <a class={`header-nav-link ${currentPath === "/ueber-mich/" ? "active" : ""}`} href="/ueber-mich/">Über mich</a>
       </li>
       <li>
@@ -42,6 +45,9 @@ const currentPath = Astro.url.pathname;
       </li>
       <li>
         <a class={`header-nav-link ${currentPath === "/themen/" ? "active" : ""}`} href="/themen/">Meine Themen</a>
+      </li>
+      <li>
+        <a class={`header-nav-link ${currentPath === "/transparenz/" ? "active" : ""}`} href="/transparenz/">Transparenz</a>
       </li>
       <li>
         <a class={`header-nav-link ${currentPath === "/kontakt/" ? "active" : ""}`} href="/kontakt/">Kontakt</a>
@@ -68,6 +74,8 @@ const currentPath = Astro.url.pathname;
     left: 0;
     right: 0;
     height: 100px;
+    z-index: 99;
+    background-color: var(--white);
   }
   .headline-container {
     display: flex;
@@ -155,28 +163,28 @@ const currentPath = Astro.url.pathname;
     transform: translateY(-400%) rotate(-45deg);
   }
 
-  body:has(#navbar-toggle:checked) {
+  /* body:has(#navbar-toggle:checked) {
     overflow: hidden;
-  }
+  } */
 
   #navbar {
     display: none;
-    position: absolute;
     top: 140px;
     left: 0;
     background-color: var(--red);
     width: 100%;
-    height: 100vh;
     border-top: 1px solid var(--white);
     animation: fadeInLeft 0.5s ease;
   }
 
   menu {
-    padding-top: 24px;
+    padding-top: 12px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     padding-left: 0;
+    height: calc(100vh - 140px);
+    overflow-y: scroll;
   }
   .active {
     color: var(--red) !important;
@@ -188,6 +196,9 @@ const currentPath = Astro.url.pathname;
     display: flex;
     justify-content: center;
     padding: 0;
+  }
+  li:last-child{
+    padding-bottom: 48px;
   }
   .header-nav-link {
     text-decoration: none;
