@@ -1,21 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Facebook from "../components/Facebook.astro";
+import Instagram from "../components/Instagram.astro";
 ---
 
 <Layout title="Truels Reichardt | SPD">
-	<main>
-		<img src="/platzhalter.jpg" alt="Platzhalter" class="platzhalter">
-	</main>
+  <main>
+    <img src="/platzhalter.jpg" alt="Platzhalter" class="platzhalter" />
+    <Facebook />
+    <Instagram />
+  </main>
 </Layout>
 
 <style>
-	p{
-		color: var(--black);
-	}
-	.platzhalter{
-		height: calc(100vh - 150px);
-		width: 100%;
-		object-fit: contain;
-		background-color: var(--red);
-	}
+  p {
+    color: var(--black);
+  }
+  .platzhalter {
+    height: calc(100vh - 150px);
+    width: 100%;
+    object-fit: contain;
+    background-color: var(--red);
+  }
 </style>
