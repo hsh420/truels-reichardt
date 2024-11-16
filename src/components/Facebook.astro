@@ -13,13 +13,12 @@
   <div
     class="fb-page"
     data-href="https://www.facebook.com/truels.reichardt.spd/"
-    data-tabs="timeline"
-    data-width=""
-    data-height=""
+    data-tabs="timeline, events, messages"
     data-small-header="false"
     data-adapt-container-width="true"
     data-hide-cover="false"
     data-show-facepile="true"
+    data-lazy="true"
   >
     <blockquote
       cite="https://www.facebook.com/truels.reichardt.spd/"
@@ -41,6 +40,12 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+  }
+  .fb-page {
+    width: 100%;
+  }
+  .fb-page .fb_iframe_widget > span {
+    width: 100%;
   }
   html,
   body {
