@@ -3,7 +3,157 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Kontakt - Truels Reichardt | SPD">
-    <main>
-        <p>kontakt works!</p>
-    </main>
+  <main>
+    <address>
+      <div class="contact-hero">
+        <div class="contact-hero__text">
+          <h1>Kontakt</h1>
+          <p>
+            <span class="contact-hero__headline">Truels Reichardt</span>
+            <br />
+            Hauptstraße 9 <br />
+            25866 Mildstedt
+          </p>
+        </div>
+        <img
+          src="/assets/images/WK 19Truels Reichardt 22-2916.jpg"
+          alt="Porträt Truels Reichardt"
+          class="contact-hero__img"
+        />
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-container">
+          <a href="tel:+491722722371" class="contact-container__link"
+            ><img
+              src="/assets/icons/SPD_Telefon_rot-frei_RGB.svg"
+              alt="Telefon Icon"
+              class="contact-container__icon"
+            />0172 / 2722371</a
+          >
+        </div>
+        <div class="contact-container">
+          <a href="mailto:TruelsR@gmx.de" class="contact-container__link"
+            ><img
+              src="/assets/icons/SPD_E-Mail_rot-frei_RGB.svg"
+              alt="E-Mail Icon"
+              class="contact-container__icon"
+            />TruelsR@gmx.de</a
+          >
+        </div>
+        <div class="contact-container">
+          <a
+            href="https://www.facebook.com/truels.reichardt.spd/"
+            class="contact-container__link"
+            ><img
+              src="/assets/icons/SPD_Facebook_rot-frei_RGB.svg"
+              alt="Facebook Icon"
+              class="contact-container__icon"
+            />facebook.com/truels.reichardt.spd</a
+          >
+        </div>
+        <div class="contact-container">
+          <a
+            href="https://www.instagram.com/truelsreichardt/"
+            class="contact-container__link"
+            ><img
+              src="/assets/icons/SPD_Instagram_rot-frei_RGB.svg"
+              alt="Instagram Icon"
+              class="contact-container__icon"
+            />instagram.com/truelsreichardt/</a
+          >
+        </div>
+      </div>
+    </address>
+  </main>
 </Layout>
+
+<style>
+  .contact-hero {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact-hero__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+  }
+  h1 {
+    color: var(--red);
+  }
+  .contact-hero__headline {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .contact-hero__img {
+    width: 50vw;
+    height: 450px;
+    object-fit: cover;
+  }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--red);
+    padding: 16px 0;
+  }
+  .contact-container {
+    background-color: var(--red);
+    display: flex;
+    justify-content: center;
+  }
+  .contact-container__link {
+    width: 310px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 16px;
+    color: var(--black);
+    opacity: 0;
+  }
+  .contact-container__icon {
+    height: 40px;
+    width: 40px;
+  }
+  .show {
+    animation: appear 1s ease-in-out;
+    opacity: 1;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
+
+<script>
+  const containerList = document.querySelectorAll(".contact-container__link");
+
+  const containerObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+        if (entry.isIntersecting) {
+          containerObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  containerList.forEach((container) => {
+    containerObserver.observe(container);
+  });
+</script>

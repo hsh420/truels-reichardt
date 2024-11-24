@@ -4,32 +4,59 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Transparenz | Truels Reichardt, SPD">
   <main>
-    <h1>Transparenz</h1>
-    <h2>Einkommen und Nebentätigkeit</h2>
-    <p>
-      Das Einkommen von Bundestagsabgeordneten ist mehr als ausreichend. Dafür
-      können Bürgerinnen und Bürger erwarten, dass sich die Volksvertreterinnen
-      und Volksvertreter voll und ganz ihrem Auftrag widmen. Wer das tut, hat
-      keine Zeit mehr für Nebentätigkeiten!
-    </p>
-    <p>
-      Für mich ist es daher völlig selbstverständlich, dass ich im Falle meiner
-      Wahl auf die Ausübung von Nebentätigkeiten verzichten werde.
-    </p>
-    <p>
-      Sollte ich wider Erwarten neben dem Mandat Einkünfte erzielen, werde ich
-      sie über die gesetzlichen Vorschriften hinaus auf den Cent genau
-      veröffentlichen und sie an gemeinnützige Organisationen und Projekte in
-      Dithmarschen und Nordfriesland spenden.
-    </p>
-    <h2>Kranken- und Pflegeversicherung</h2>
-    <p>
-      Bundestagsabgeordnete haben die Wahl, ob sie sich gesetzlich oder privat
-      versichern. Für mich ist dabei klar, dass ich im Falle meiner Wahl in der
-      gesetzlichen Krankenversicherung bleibe. Grundsätzlich bin ich der
-      Meinung, dass es nur eine Krankenversicherung und eine Rentenversicherung
-      geben sollte, in die alle – auch Politiker, Beamtinnen und Selbständige –
-      ohne Beitragsbemessungsgrenze einzahlen.
-    </p>
+    <div class="wrapper">
+      <h1>Transparenz</h1>
+      <h2>Einkommen und Nebentätigkeit</h2>
+      <p>
+        Das Einkommen von Bundestagsabgeordneten ist mehr als ausreichend. Dafür
+        können Bürgerinnen und Bürger erwarten, dass sich die
+        Volksvertreterinnen und Volksvertreter voll und ganz ihrem Auftrag
+        widmen. Wer das tut, hat keine Zeit mehr für Nebentätigkeiten!
+      </p>
+      <p>
+        Für mich ist es daher völlig selbstverständlich, dass ich im Falle
+        meiner Wahl auf die Ausübung von Nebentätigkeiten verzichten werde.
+      </p>
+      <p>
+        Sollte ich wider Erwarten neben dem Mandat Einkünfte erzielen, werde ich
+        sie über die gesetzlichen Vorschriften hinaus auf den Cent genau
+        veröffentlichen und sie an gemeinnützige Organisationen und Projekte in
+        Dithmarschen und Nordfriesland spenden.
+      </p>
+      <h2>Kranken- und Pflegeversicherung</h2>
+      <p>
+        Bundestagsabgeordnete haben die Wahl, ob sie sich gesetzlich oder privat
+        versichern. Für mich ist dabei klar, dass ich im Falle meiner Wahl in
+        der gesetzlichen Krankenversicherung bleibe. Grundsätzlich bin ich der
+        Meinung, dass es nur eine Krankenversicherung und eine
+        Rentenversicherung geben sollte, in die alle – auch Politiker,
+        Beamtinnen und Selbständige – ohne Beitragsbemessungsgrenze einzahlen.
+      </p>
+    </div>
   </main>
 </Layout>
+
+<style>
+  main {
+    padding: 16px 0;
+  }
+  .wrapper {
+    border-left: 4px solid var(--red);
+    width: 90%;
+    margin: 0 auto;
+  }
+  h1,
+  h2 {
+    text-align: left;
+    padding-left: 16px;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    padding: 8px 16px;
+  }
+  a {
+    color: var(--black);
+  }
+</style>

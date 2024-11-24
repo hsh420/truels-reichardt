@@ -5,11 +5,13 @@ const currentPath = Astro.url.pathname;
 <header>
   <div class="headline-container">
     <div>
-      <img
-        src="/SPD_Rose_rot-frei_RGB.png"
-        alt="SPD Rose rot"
-        class="headline-container__rose"
-      />
+      <a href="/">
+        <img
+          src="/SPD_Rose_rot-frei_RGB.png"
+          alt="SPD Rose rot"
+          class="headline-container__rose"
+        />
+      </a>
     </div>
     <div class="headline-container__text">
       <h2>Truels Reichardt</h2>
@@ -220,7 +222,7 @@ const currentPath = Astro.url.pathname;
     padding: 0;
   }
   li:last-child {
-    padding-bottom: 80px;
+    padding-bottom: 120px;
   }
   .header-nav-link {
     text-decoration: none;
