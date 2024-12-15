@@ -1,31 +1,32 @@
 ---
-
+import InstagramIcon from "/assets/icons/SPD_Instagram_weiss-frei_RGB.svg?raw";
+import FacebookIcon from "/assets/icons/SPD_Facebook_weiss-frei_RGB.svg?raw";
 ---
 
 <footer>
   <div class="sm-container">
     <a
       href="https://www.facebook.com/truels.reichardt.spd/"
+      target="_blank"
       class="sm-container__link"
-      ><img
-        src="/assets/icons/SPD_Facebook_weiss-frei_RGB.svg"
-        alt="Facebook Icon"
-        class="icon"
-      /></a
     >
+      <img src="/assets/icons/SPD_Facebook_rot-frei_RGB.svg" class="white" />
+    </a>
     <a
       href="https://www.instagram.com/truelsreichardt/"
+      target="_blank"
       class="sm-container__link"
-      ><img
-        src="/assets/icons/SPD_Instagram_weiss-frei_RGB.svg"
-        alt="Instagram Icon"
-        class="icon"
-      /></a
     >
+      <img
+        src="/assets/icons/SPD_Instagram_rot-frei_RGB.svg"
+        class="white"
+        alt="Instagram Icon"
+      />
+    </a>
   </div>
   <div class="link-container">
-    <a href="/datenschutz">Datenschutz</a><span>|</span><a href="/impressum"
-      >Impressum</a
+    <a href="/datenschutz">Datenschutz</a><span class="spacer">|</span><a
+      href="/impressum">Impressum</a
     >
   </div>
 </footer>
@@ -36,20 +37,27 @@
     color: var(--white);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 16px;
   }
   .sm-container {
     position: relative;
+    display: flex;
+    gap: 16px;
   }
   .sm-container__link {
-    width: 40px;
-    height: 40px;
-    background-color: var(--white);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
   }
-  .icon {
-    width: 40px;
-    height: 40px;
-    fill: #fff !important;
+  .white {
+    filter: invert(93%) sepia(93%) saturate(30%) hue-rotate(49deg)
+      brightness(107%) contrast(106%);
+    height: 20px;
+    width: 20px;
+  }
+  .spacer {
+    padding: 0 16px;
   }
   a {
     color: var(--white);

@@ -20,7 +20,7 @@ const { title, imgSrc, alt, date, text, fbLink, instaLink, waLink, mailLink } =
     <img src={imgSrc} alt={alt} class="article__img" />
     <h2 class="headline">{title}</h2>
     <p class="date">{date}</p>
-    <p class="text">{text}</p>
+    <p class="text" set:html={text} />
     <h4>Teile diesen Beitrag:</h4>
     <div class="cta__container">
       <a
@@ -74,9 +74,12 @@ const { title, imgSrc, alt, date, text, fbLink, instaLink, waLink, mailLink } =
     padding: 8px;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 32px;
   }
   .article__wrapper {
     border-left: 4px solid var(--red);
+    max-width: 600px;
+    margin: 0 auto;
   }
   .headline {
     text-align: left;
@@ -84,6 +87,7 @@ const { title, imgSrc, alt, date, text, fbLink, instaLink, waLink, mailLink } =
   }
   .article__img {
     width: 100%;
+    max-width: 600px;
   }
   .date {
     font-style: italic;

@@ -6,20 +6,59 @@ import Instagram from "../components/Instagram.astro";
 
 <Layout title="Truels Reichardt | SPD">
   <main>
-    <img src="/platzhalter.jpg" alt="Platzhalter" class="platzhalter" />
-    <Facebook />
-    <Instagram />
+    <h1>Moin!</h1>
+    <div class="screen">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni at
+          consequatur omnis id soluta, minus tenetur quaerat accusamus
+          voluptates quae dolorum aperiam, odio modi blanditiis illum quisquam
+          veritatis expedita beatae?
+        </p>
+        <div class="img-container">
+          <img src="/platzhalter.jpg" alt="Platzhalter" class="platzhalter" />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+          odio deserunt esse ipsa suscipit quos consequuntur laudantium? Dolorum
+          repudiandae dolore voluptates maxime ipsum magnam cum sunt, quod
+          nostrum, libero praesentium.
+        </p>
+      </div>
+      <div class="social-media">
+        <Facebook />
+        <Instagram />
+      </div>
+    </div>
   </main>
 </Layout>
 
 <style>
+  .screen {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+  }
   p {
     color: var(--black);
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
   }
   .platzhalter {
     height: calc(100vh - 150px);
     width: 100%;
+    max-width: 400px;
     object-fit: contain;
     background-color: var(--red);
+  }
+  .social-media {
+    min-height: 500px;
+  }
+  @media screen and (min-width: 768px) {
+    .social-media {
+      min-height: 1050px;
+    }
   }
 </style>
