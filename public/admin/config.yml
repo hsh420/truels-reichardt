@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+collections:
+  - name: "aktuelles" # Used in routes, e.g., /admin/collections/blog
+    label: "Aktulles" # Used in the UI
+    folder: "src/aktulles" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "aktuelles",
+        }
+      - { label: "Titel", name: "title", widget: "string" }
+      - {
+          label: "Datum der Veröffentlichung",
+          name: "date",
+          widget: "datetime",
+        }
+      - { label: "Anzeige-Bild", name: "thumbnail", widget: "image" }
+      - { label: "Text", name: "body", widget: "markdown" }
+media_folder: "/assets/aktuelles/images" # Location where files will be stored in the repo
+public_folder: "/assets/aktuelles/images" # The src attribute for uploaded media
