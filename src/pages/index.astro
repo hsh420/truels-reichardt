@@ -6,23 +6,73 @@ import Instagram from "../components/Instagram.astro";
 
 <Layout title="Truels Reichardt | SPD">
   <main>
-    <h1>Moin!</h1>
-    <div class="screen">
+    <h1>
+      Liebe Dithmarscherinnen und Dithmarscher, liebe Nordfriesinnen und
+      Nordfriesen,
+    </h1>
+    <div class="responsive-switch">
       <div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni at
-          consequatur omnis id soluta, minus tenetur quaerat accusamus
-          voluptates quae dolorum aperiam, odio modi blanditiis illum quisquam
-          veritatis expedita beatae?
+          ich freue mich, Sie und euch auf meiner Homepage begrüßen zu dürfen.
+          Die Westküste ist meine Heimat. Vor 30 Jahren wurde ich in Husum
+          geboren. In Mildstedt bin ich aufgewachsen und habe dort inzwischen
+          selbst eine Familie gegründet.
         </p>
         <div class="img-container">
-          <img src="/platzhalter.jpg" alt="Platzhalter" class="platzhalter" />
+          <img
+            src="/assets/images/TR_BTW9.jpg"
+            alt="Familie Reichardt am Deich"
+            class="img-container__picture"
+          />
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-          odio deserunt esse ipsa suscipit quos consequuntur laudantium? Dolorum
-          repudiandae dolore voluptates maxime ipsum magnam cum sunt, quod
-          nostrum, libero praesentium.
+          Für mein Dorf und meinen Kreis engagiere ich mich seit vielen Jahren
+          ehrenamtlich in der Kommunalpolitik und im Fußball. Meine Erfahrungen
+          aus dem alltäglichen Leben zwischen Familie, Ehrenamt und Beruf bzw.
+          als Gemeindevertreter, Kreistagsabgeordneter sowie Fraktions- und
+          Ausschussvorsitzender möchte ich im Bundestag einbringen. Hier gibt es
+          mehr <a href="/ueber-mich" class="link">über mich</a>.
+        </p>
+        <div class="img-container">
+          <img
+            src="/assets/images/Reichardt_Truels.webp"
+            alt="Porträt Truels Reichart; zeigt SPD-Logo in linker Hand"
+            class="img-container__picture"
+          />
+        </div>
+        <p>
+          Als mit der Region verbundener jungen Mensch möchte ich mich als
+          Lobbyist im besten Sinne für den Westküste einsetzen. Nachdem der
+          Wahlkreis Nordfriesland / Dithmarschen-Nord seit Jahrzehnten mit
+          überschaubarem Erfolg von Abgeordneten der CDU vertreten wurde, wird
+          es nun Zeit für einen Wechsel. Hier gibt es mehr über <a
+            href="/motivation"
+            class="link">meine Motivation</a
+          >.
+        </p>
+        <div class="img-container">
+          <img
+            src="/assets/images/TR_BTW4.jpg"
+            alt="Porträt Truels Reichart; im Hintergrund Windmühlen"
+            class="img-container__picture"
+          />
+        </div>
+        <p>
+          Denn es gibt viel anzupacken für unsere Region. Ich möchte, dass wir
+          die Potentiale von Nordfriesland und Dithmarschen nutzen. Das passiert
+          aber nicht von selbst, sondern durch aktives Gestalten. <a
+            href="/themen"
+            class="link"
+            >Hier gibt es mehr über meine Vorstellung dazu und über meine Themen</a
+          >. Ich würde mich sehr über Ihr und euer Vertrauen bei der
+          Bundestagswahl am 23. Februar freuen und sage meinen vollen Einsatz zu
+          – mit der Westküste im Herzen und der Zukunft im Blick!
+        </p>
+        <p>
+          Dein / Ihr <br />
+          <span class="signature">Truels Reichardt</span>
+          <br />
+          Kandidat für Nordfriesland / Dithmarschen-Nord
         </p>
       </div>
       <div class="social-media">
@@ -34,10 +84,16 @@ import Instagram from "../components/Instagram.astro";
 </Layout>
 
 <style>
-  .screen {
+  .responsive-switch {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 64px;
+  }
+  h1 {
+    padding: 16px 8px;
+    max-width: 720px;
+    margin: 0 auto;
   }
   p {
     color: var(--black);
@@ -45,6 +101,16 @@ import Instagram from "../components/Instagram.astro";
   .img-container {
     display: flex;
     justify-content: center;
+    margin: 16px 0;
+    padding: 0 16px;
+  }
+  .img-container__picture {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 4px;
+  }
+  .link {
+    color: var(--black);
   }
   .platzhalter {
     height: calc(100vh - 150px);
@@ -53,12 +119,18 @@ import Instagram from "../components/Instagram.astro";
     object-fit: contain;
     background-color: var(--red);
   }
+  .signature {
+    font-size: 1.4rem;
+    color: var(--red);
+  }
   .social-media {
-    min-height: 500px;
+    min-height: 580px;
   }
   @media screen and (min-width: 768px) {
     .social-media {
-      min-height: 1050px;
+      display: flex;
+      max-width: 720px;
+      margin: 0 auto;
     }
   }
 </style>

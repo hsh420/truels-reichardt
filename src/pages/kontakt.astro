@@ -126,6 +126,12 @@ import Layout from "../layouts/Layout.astro";
     animation: appear 1s ease-in-out;
     opacity: 1;
   }
+  @media screen and (min-width: 1400px) {
+    .contact-wrapper {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
   @keyframes appear {
     0% {
       opacity: 0;
