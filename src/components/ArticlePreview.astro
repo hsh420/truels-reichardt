@@ -5,14 +5,10 @@ interface Props {
   alt: string;
   date: string;
   text: string;
-  fbLink?: string;
-  instaLink?: string;
-  waLink?: string;
-  mailLink?: string;
+  slug?: string;
 }
 
-const { title, imgSrc, alt, date, text, fbLink, instaLink, waLink, mailLink } =
-  Astro.props;
+const { title, imgSrc, alt, date, text, slug } = Astro.props;
 
 function formatDate(date: string): string {
   const dateToUse = date.substring(0, 10).split("-");
@@ -59,42 +55,9 @@ function getMonth(month: string): string | undefined {
     <img src={imgSrc} alt={alt} class="article__img" />
     <h2 class="headline">{title}</h2>
     <p class="date">{formatDate(date)}</p>
-    <div class="text" set:html={text} />
-    <h4>Teile diesen Beitrag:</h4>
-    <div class="cta__container">
-      <a
-        href={"https://www.facebook.com/sharer/sharer.php?u=" + fbLink}
-        class="cta__link"
-      >
-        <div class="cta__btn">
-          <img
-            src="/assets/icons/SPD_Facebook_rot-frei_RGB.svg"
-            alt="Facebook Icon"
-            class="icon"
-          />Facebook
-        </div>
-      </a>
-      <a
-        href={"https://api.whatsapp.com/send?text=" + waLink}
-        class="cta__link"
-      >
-        <div class="cta__btn">
-          <img
-            src="/assets/icons/SPD_Whatsapp_rot-frei_RGB.svg"
-            alt="WhatsApp Icon"
-            class="icon"
-          />WhatsApp
-        </div>
-      </a>
-      <a href={"mailto:?body=" + mailLink} class="cta__link">
-        <div class="cta__btn">
-          <img
-            src="/assets/icons/SPD_E-Mail_rot-frei_RGB.svg"
-            alt="Mail Icon"
-            class="icon"
-          />Mail
-        </div>
-      </a>
+    <p>{text.replace(/<[^>]+>/g, "").substring(0, 500) + " ..."}</p>
+    <div class="link-container">
+      <a href={slug} class="link">...mehr lesen</a>
     </div>
   </div>
 </div>
@@ -114,6 +77,7 @@ function getMonth(month: string): string | undefined {
   .headline {
     text-align: left;
     padding: 0 16px;
+    margin-bottom: 8px;
   }
   .article__img {
     width: 100%;
@@ -128,36 +92,21 @@ function getMonth(month: string): string | undefined {
     text-align: justify;
     hyphens: auto;
   }
-  p > img {
+  .link-container {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    background-color: var(--red);
+    padding: 16px 0;
+    margin-top: 16px;
   }
-  .cta__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
+  .link {
+    padding: 8px;
+    background-color: var(--white);
+    border-radius: 4px;
+    color: var(--black);
   }
-  .cta__link {
-    text-decoration: none;
-    color: var(--red);
-    cursor: pointer;
-    width: 140px;
-  }
-  .cta__btn {
-    padding: 16px;
-    border: 2px solid var(--red);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms;
-  }
-  .cta__btn:hover {
+  .link:hover {
     background-color: rgba(0, 0, 0, 0.05);
-  }
-  .icon {
-    height: 15px;
-    width: 15px;
-    margin-right: 8px;
   }
 </style>

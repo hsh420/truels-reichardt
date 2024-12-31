@@ -1,34 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Article from "../components/Article.astro";
+import ArticlePreview from "../components/ArticlePreview.astro";
 
-// const posts = await Astro.glob("../../collections/aktuelles/*.md");
+const posts = await Astro.glob("../collections/aktuelles/*.md");
 ---
 
 <Layout title="Aktuelles | Truels Reichart, SPD">
   <main>
     <h1>Aktuelles</h1>
-    <Article
-      title=""
-      text=`Auf Antrag auch der SPD Nordfriesland hat sich der Kreistag in seiner letzten Sitzung zum CCS-freien Kreis erklärt und sich gegen die Verpressung von CO2 an Land und unter der Nordsee positioniert.<br/>
-Ich untersütze Kein CO2 Endlager! Für mich gibt es gute Argumente, die gegen CCS sprechen:<br/>   
-⚠️ Sicherheit: Wenn es in den nächsten tausenden Jahren zu einem Entweichen von CO2 kommt, droht uns oder unseren Nachkommen eine epochale Katastrophe. Klar ist doch: Es geht bei der CO2-Endlagerung um einen Zeitraum von zigtausend Jahren - ein Zeitraum, den kein Mensch überblicken kann. Wir erinnern doch schon nicht, wenn vor wenigen Jahren oder Jahrzehnten jemand in unserer Gemeinde irgendwo Müll verbuddelt hat. Niemand kann ernsthaft die Vorstellung besitzen, dass wir in nur 200 Jahren noch wissen, wo wir das CO2 verpresst haben.<br/> 
-💶 Kosten: Man kann also davon ausgehen, dass mindestens ein mittlerer bis hoher zweistelliger Milliardenbetrag investiert werden muss. Dabei fehlt doch jetzt schon an Mitteln für Investitionen in Straßen, Schienen, Sicherheit, Krankenhäuser und Bildung!<br/> 
-🌎 Ablenkung vom Kernproblem: Einige wollen sich mit CCS vor der Vermeidung von CO2 drücken. Damit meine ich vor allem diejenigen, die das Zeitalter der Kohle verlängern und Windmühlen abbauen wollen. Viel sinnvoller als Milliarden in CCS zu stecken, ist doch, den Weg der CO2-Vermeidung weiter zu gehen.<br/>
-🗣 Für die vielfach erwähnten nicht vermeidbaren Restemissionen gibt es neben dem Ausbau natürlicher CO2-Senken auch noch eine pragmatische Vorgehensweise.<br/> 
-🎥 Meinen Vorschlag dazu gibt es unter nachfolgendem Link im Video: <a href="https://youtu.be/8UkgU05_o3s?si=KxMLsj6h53Y67XHi&t=3758" alt="Link zu Youtube">https://youtu.be/8UkgU05_o3s?si=KxMLsj6h53Y67XHi&t=3758</a><br/>
-⚓️ Für jemanden, der mit seiner Heimat verbunden ist, ist die Positionierung gegen CCS eine Selbstverständlichkeit. Und das gilt für mich auch für den Fall, dass ich in den Deutschen Bundestag gewählt werden sollte!`
-      `
-      date="11. Dezember 2024"
-      imgSrc="/platzhalter.jpg"
-      alt="Bild zum Teilen: blablabla"
-    />
-    <Article
-      title="Truels Reichardt zum Kandidaten für die Bundestagswahl 2025 gewählt!"
-      date="30. September 2024"
-      text="Die SPD Nordfriesland und die SPD Dithmarschen-Nord haben heute (28.09.2024) auf ihrer Wahlkreiskonferenz in Mildstedt den Fraktionsvorsitzenden der nordfriesischen SPD-Kreistagsfraktion Truels Reichardt mit überwältigender Mehrheit zu ihrem Direktkandidaten für die nächste Bundestagswahl gewählt. Er erhielt mit 88 von 91 Stimmen ein äußerst überzeugendes Votum der Delegierten. Truels Reichardt war der einzige Kandidat, der sich für den Bundestagswahlkreis 002 (Nordfriesland und Dithmarschen-Nord) zur Wahl stellte. In seiner mit großem Beifall aufgenommenen Bewerbungsrede skizzierte Truels Reichardt, wofür er antritt: 'Ich sage euch zu, dass mich im Falle meiner Wahl in den Bundestag als Lobbyist im besten Sinne für die Westküste einsetzen werden: Für Fördermittel, für unsere Infrastruktur, für unsere Kliniken und für den wirtschaftlichen Aufschwung. Mit der Hartnäckigkeit, die viele von euch von mir aus der Kommunalpolitik kennen, nehme ich die Westküste in den Blick.'  Neben den Delegierten aus den Ortsvereinen konnten die beiden Kreisvorsitzenden Marc Timmer und Tordis Batscheider auch prominente Gäste begrüßen: die beiden nordfriesischen Bürgermeister Rolf Riebesell (Mildstedt) und Tobias Tietgen (Friedrichstadt), den Heider Bürgermeister Oliver Schmidt-Gutzat sowie den Kieler Oberbürgermeister und stellvertretenden Landesvorsitzenden Ulf Kämpfer.  'Wir freuen uns sehr, mit Truels Reichardt einen erfahrenen Kommunalpolitiker mit frischen Ideen ins Rennen schicken zu können. Obwohl er erst 30 Jahre alt ist, bringt er bereits viele Jahre Erfahrung in der Mildstedter Gemeindevertretung und im nordfriesischen Kreistag mit. Die enorme Zustimmung von fast 97% zeigt, dass die SPD geschlossen und zuversichtlich in den Wahlkampf geht. Wir werden Truels nach Kräften in seinem Wahlkampf unterstützen. Damit wir bald wieder eine starke Stimme für die Westküste in Berlin haben', so Marc Timmer und Tordis Batscheider."
-      imgSrc="/platzhalter.jpg"
-      alt="Bild zum Teilen: Truels als Bundestagskandidat für die SPD Nordfriesland und Dithmarschen gewählt"
-    />
+    {
+      posts.map((post) => (
+        <article>
+          <ArticlePreview
+            title={post.frontmatter.title}
+            text={post.compiledContent()}
+            date={post.frontmatter.date}
+            imgSrc={post.frontmatter.thumbnail}
+            alt={post.frontmatter.alt}
+            slug={
+              post.frontmatter.date.substring(0, 10) +
+              "-" +
+              post.frontmatter.title.toLowerCase()
+            }
+          />
+        </article>
+      ))
+    }
   </main>
 </Layout>
+
+<style>
+  img {
+    width: 100% !important;
+  }
+  article + article {
+    margin-top: 32px;
+  }
+</style>
