@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Article from "../../components/Article.astro";
+
+export async function getStaticPaths() {
+  const posts: any = await Astro.glob("../../collections/aktuelles/*.md");
+  const frontmatterArr: Array<string> = [];
+
+  console.log(posts[0].compiledContent());
+
+  //   posts.forEach((post: any) => {
+  //     frontmatterArr.push(post.frontmatter);
+  //   });
+
+  //   return frontmatterArr.map((post: any) => ({
+  //     params: {
+  //       page: post.date.substring(0, 10) + "-" + post.title.toLowerCase(),
+  //     },
+  //     props: { post },
+  //   }));
+  return posts.map((post: any) => ({
+    params: {
+      page:
+        post.frontmatter.date.substring(0, 10) +
+        "-" +
+        post.frontmatter.title.toLowerCase(),
+    },
+    props: { post },
+  }));
+}
+
+const { page }: any = Astro.params;
+const { post }: any = Astro.props;
+---
+
+<Layout title={post.frontmatter.title}>
+  <main>
+    <Article
+      text={post.compiledContent()}
+      title={post.frontmatter.title}
+      imgSrc={post.frontmatter.thumbnail}
+      alt={post.frontmatter.alt}
+      date={post.frontmatter.date}
+      instaLink={"https://storied-elf-dbf4c8.netlify.app/aktuelles/" + page}
+      fbLink={"https://storied-elf-dbf4c8.netlify.app/aktuelles/" + page}
+      mailLink={"https://storied-elf-dbf4c8.netlify.app/aktuelles/" + page}
+      waLink={"https://storied-elf-dbf4c8.netlify.app/aktuelles/" + page}
+    />
+  </main>
+</Layout>
+
+<!-- instaLink={"https://truels-reichardt.de/aktuelles/" + page}
+fbLink={"https://truels-reichardt.de/aktuelles/" + page}
+mailLink={"https://truels-reichardt.de/aktuelles/" + page}
+waLink={"https://truels-reichardt.de/aktuelles/" + page} -->

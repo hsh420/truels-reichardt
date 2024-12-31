@@ -20,7 +20,7 @@ const { title, imgSrc, alt, date, text, fbLink, instaLink, waLink, mailLink } =
     <img src={imgSrc} alt={alt} class="article__img" />
     <h2 class="headline">{title}</h2>
     <p class="date">{date}</p>
-    <p class="text" set:html={text} />
+    <div class="text" set:html={text} />
     <h4>Teile diesen Beitrag:</h4>
     <div class="cta__container">
       <a
@@ -115,6 +115,10 @@ const { title, imgSrc, alt, date, text, fbLink, instaLink, waLink, mailLink } =
     text-align: center;
     display: flex;
     align-items: center;
+    transition: background-color 250ms;
+  }
+  .cta__btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
   }
   .icon {
     height: 15px;
