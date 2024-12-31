@@ -28,4 +28,4 @@ collections:
         }
       - { label: "Text", name: "body", widget: "markdown" }
 media_folder: "public/assets/aktuelles/images" # Location where files will be stored in the repo
-public_folder: "public/assets/aktuelles/images" # The src attribute for uploaded media
+public_folder: "assets/aktuelles/images" # The src attribute for uploaded media
