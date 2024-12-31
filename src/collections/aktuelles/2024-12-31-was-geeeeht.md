@@ -10,4 +10,4 @@ jvhdczczh
 
 dfgfg
 
-![lol](public/assets/aktuelles/images/wahlprogramm-vorstellung-_-bundestagswahl-2025.jpg "hahahaha")
+![lol](/assets/aktuelles/images/wahlprogramm-vorstellung-_-bundestagswahl-2025.jpg "hahahaha")
