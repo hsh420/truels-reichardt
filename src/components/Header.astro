@@ -4,7 +4,16 @@ const currentPath = Astro.url.pathname;
 
 <header>
   <div class="headline-container">
-    <div>
+    <div class="headline-container__spacing">
+      <a href="/">
+        <img
+          src="/assets/images/BTW25_CtA_Waehlen_rot_RGB.svg"
+          alt="Wahlaufruf 'Am 23. Februar SPD wählen'"
+          class="headline-container__stoerer"
+        /></a
+      >
+    </div>
+    <div class="headline-container__spacing rose">
       <a href="/">
         <img
           src="/SPD_Rose_rot-frei_RGB.png"
@@ -15,7 +24,9 @@ const currentPath = Astro.url.pathname;
     </div>
     <div class="headline-container__text">
       <h2>Truels Reichardt</h2>
-      <p>...für Dich nach Berlin!</p>
+      <p class="headline-container__slogan">
+        Die Westküste im Herzen. <br />Die Zukunft im Blick.
+      </p>
     </div>
   </div>
   <div class="nav">
@@ -114,15 +125,29 @@ const currentPath = Astro.url.pathname;
     padding: 0;
     text-align: right;
   }
+  .headline-container__slogan {
+    font-size: 12px;
+    margin-top: 8px;
+    padding-top: 0;
+    padding-right: 0;
+    color: var(--black);
+  }
   .headline-container__text > h2 {
     margin: 0;
   }
   .headline-container__text > p {
     margin-top: 0;
   }
+  .headline-container__stoerer {
+    width: 70px;
+    height: 70px;
+  }
   .headline-container__rose {
     width: 60px;
     height: 60px;
+  }
+  .rose {
+    display: none;
   }
   .nav {
     background-color: var(--red);
@@ -235,6 +260,19 @@ const currentPath = Astro.url.pathname;
     border-radius: 16px;
     width: 200px;
     text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    .rose {
+      display: flex;
+      justify-content: center;
+    }
+    .headline-container__spacing,
+    .headline-container__text {
+      width: 250px;
+    }
+    .headline-container__text > h2 {
+      text-align: right;
+    }
   }
   @media screen and (min-width: 1275px) {
     .menu_icon,

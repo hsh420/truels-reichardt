@@ -1,15 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ArticlePreview from "../components/ArticlePreview.astro";
+import { replaceUmlaute } from "../helper";
 
 const posts = await Astro.glob("../collections/aktuelles/*.md");
+const sortedPosts = posts.sort((a, b) => {
+  return (
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+  );
+});
+console.log(sortedPosts[0].frontmatter);
 ---
 
 <Layout title="Aktuelles | Truels Reichart, SPD">
   <main>
     <h1>Aktuelles</h1>
     {
-      posts.map((post) => (
+      sortedPosts.map((post) => (
         <article>
           <ArticlePreview
             title={post.frontmatter.title}
@@ -20,7 +28,9 @@ const posts = await Astro.glob("../collections/aktuelles/*.md");
             slug={
               post.frontmatter.date.substring(0, 10) +
               "-" +
-              post.frontmatter.title.toLowerCase()
+              replaceUmlaute(
+                post.frontmatter.title.replace(/[^a-zA-Z0-9]/g, "")
+              ).toLowerCase()
             }
           />
         </article>

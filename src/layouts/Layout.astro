@@ -86,4 +86,11 @@ const { title } = Astro.props;
     font-family: "SPD The Sans Bold";
     src: url(/font/SPD2002TheSans-Bold.ttf);
   }
+  @media (prefers-reduced-motion) {
+    * {
+      animation: none;
+      opacity: 1;
+      transition: none;
+    }
+  }
 </style>

@@ -1,29 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Article from "../../components/Article.astro";
+import { replaceUmlaute } from "../../helper";
 
 export async function getStaticPaths() {
   const posts: any = await Astro.glob("../../collections/aktuelles/*.md");
-  const frontmatterArr: Array<string> = [];
 
-  console.log(posts[0].compiledContent());
-
-  //   posts.forEach((post: any) => {
-  //     frontmatterArr.push(post.frontmatter);
-  //   });
-
-  //   return frontmatterArr.map((post: any) => ({
-  //     params: {
-  //       page: post.date.substring(0, 10) + "-" + post.title.toLowerCase(),
-  //     },
-  //     props: { post },
-  //   }));
   return posts.map((post: any) => ({
     params: {
       page:
         post.frontmatter.date.substring(0, 10) +
         "-" +
-        post.frontmatter.title.toLowerCase(),
+        replaceUmlaute(
+          post.frontmatter.title.replace(/[^a-zA-Z0-9]/g, "")
+        ).toLowerCase(),
     },
     props: { post },
   }));

@@ -73,6 +73,7 @@ function getMonth(month: string): string | undefined {
     border-left: 4px solid var(--red);
     max-width: 600px;
     margin: 0 auto;
+    box-shadow: 0 0 4px 0 var(--black);
   }
   .headline {
     text-align: left;
@@ -101,12 +102,16 @@ function getMonth(month: string): string | undefined {
     margin-top: 16px;
   }
   .link {
-    padding: 8px;
+    padding: 8px 16px;
     background-color: var(--white);
     border-radius: 4px;
     color: var(--black);
+    text-decoration: none;
+    border: 2px solid var(--white);
+    transition: all 250ms;
   }
   .link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--red);
+    color: var(--white);
   }
 </style>
