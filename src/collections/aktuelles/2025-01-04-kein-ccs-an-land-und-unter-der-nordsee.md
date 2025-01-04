@@ -1,45 +1,48 @@
 ---
-layout: ../../layouts/Layout.astro
-title: Kein CCS an Land und unter der Nordsee
-date: 2024-12-11T12:00:00.000Z
-thumbnail: /assets/aktuelles/images/posting_persönlich-2-.png
-alt: 'Truels Reichardt im Bild mit folgendem Zitat: "Mit unserem Wattenmeer und
-  unserem Trinkwasser spielt man nicht!"'
+title: Auflösung des Bundestages
+date: 2024-12-27T16:00:00.000Z
+thumbnail: /assets/aktuelles/images/posting_persönlich.png
+alt: 'Truels Reichardt im Bild mit folgendem Zitat: "Ich stehe für einen
+  Aufbruch und einen positiven Blick in die Zukunft!"'
 ---
-Auf Antrag auch der SPD-Kreistagsfraktion hat sich der
-Kreistag in seiner letzten Sitzung zum CCS-freien Kreis erklärt und sich gegen
-die Verpressung von CO2 an Land und unter der Nordsee positioniert.
+Heute hat Bundespräsident Frank-Walter Steinmeier den
+Bundestag aufgelöst. Damit ist der letzte Schritt erfolgt, so dass am 23.02.
+Neuwahlen stattfinden können.
 
-Ich unterstütze die Bürgerinitiative gegen das CO2-Endlager!
-Für mich gibt es gute Argumente, die gegen CCS sprechen: 
+Das ist gut und richtig. Die Ampel mit ihren drei sehr
+unterschiedlichen Partnern hat zwar durchaus auch gute Entscheidungen
+getroffen, doch wurden die politischen und kulturellen Unterschiede zwischen
+den regierungstragenden Parteien zum Ende hin immer größer.
 
-Sicherheit: Wenn es in den nächsten tausenden Jahren zu
-einem Entweichen von CO2 kommt, droht uns oder unseren Nachkommen eine epochale
-Katastrophe. Klar ist doch: Es geht bei der CO2-Endlagerung um einen Zeitraum
-von zigtausend Jahren - ein Zeitraum, den kein Mensch überblicken kann. Wir
-erinnern doch schon nicht, wenn vor wenigen Jahren oder Jahrzehnten jemand in
-unserer Gemeinde irgendwo Müll verbuddelt hat. Niemand kann ernsthaft die
-Vorstellung besitzen, dass wir in nur 200 Jahren noch wissen, wo wir das CO2
-verpresst haben. 
+Nun können die Wählerinnen und Wähler entscheiden, wie es
+weiter geht. In diesen herausfordernden Zeiten ist das eine extrem wichtige
+Entscheidung! Welchem Kanzlerkandidaten traut man zu, mit Besonnenheit und
+Augenmaß eine Regierung zu führen, Deutschland in der Welt zu vertreten und in
+Fragen von Krieg und Frieden umsichtig zu agieren?
 
-Kosten: Man kann also davon ausgehen, dass mindestens ein
-mittlerer bis hoher zweistelliger Milliardenbetrag investiert werden muss.
-Dabei fehlt doch jetzt schon an Mitteln für Investitionen in Straßen, Schienen,
-Sicherheit, Krankenhäuser und Bildung! 
+Olaf Scholz und die SPD werden mit Hilfe eines
+Deutschlandfonds und einer Reform der Schuldenbremse enormes privates und
+öffentliches Kapital für die Modernisierung des Landes organisieren. Wir werden
+mit einem Made-in-Germany-Bonus zielgerichtete Anreize für notwendige Investitionen
+hier produzierender Unternehmen schaffen. 
 
-Ablenkung vom Kernproblem: Einige wollen sich mit CCS vor
-der Vermeidung von CO2 drücken. Damit meine ich vor allem diejenigen, die das
-Zeitalter der Kohle verlängern und Windmühlen abbauen wollen. Viel sinnvoller
-als Milliarden in CCS zu stecken, ist doch, den Weg der CO2-Vermeidung weiter
-zu gehen.
+Damit unterscheiden wir uns fundamental von dem, was die
+Merz-CDU vorhat: nicht finanzierbare Steuergeschenke mit der Gießkanne an
+Unternehmen, ob die nun investieren oder nicht. Den Rückbau von
+Windenergieanlagen, weil die hässlich sind. Das wäre das größtmögliche
+Wohlstandsvernichtungsprogramm für die Westküste. Und ebenfalls eine Rückkehr
+ins letzte Jahrhundert bei der Gleichstellungspolitik mit einem Kandidaten, der
+von der „natürlichen Autorität des Mannes“ spricht.
 
-Für die vielfach erwähnten nicht vermeidbaren Restemissionen
-gibt es neben dem Ausbau natürlicher CO2-Senken auch noch eine pragmatische
-Vorgehensweise. 
+Als junger Sozialdemokrat möchte ich einen Aufbruch und
+einen positiven Blick in die Zukunft für Deutschland und ganz besonders für die
+Westküste. Auch hier in Nordfriesland und Dithmarschen gibt es die Wahl
+zwischen neuer Dynamik und engagiert-hartnäckiger Interessenvertretung für die
+Region oder einem Weiter-So wie in den letzten Jahrzehnten. Denn die
+Erfolgsbilanz der für diesen Wahlkreis direkt gewählten
+CDU-Bundestagsabgeordneten der letzten bald 23 Jahre ist doch recht
+überschaubar.
 
-Meinen Vorschlag dazu gibt es unter nachfolgendem Link im
-Video: <https://youtu.be/8UkgU05_o3s?si=KxMLsj6h53Y67XHi&t=3758>
-
-Für jemanden, der mit seiner Heimat verbunden ist, ist die
-Positionierung gegen CCS eine Selbstverständlichkeit. Und das gilt für mich
-auch für den Fall, dass ich in den Deutschen Bundestag gewählt werden sollte!
+Diese Unterschiede werden nun in den Wochen bis zum 23.
+Februar deutlich. Ich freue mich auf die Auseinandersetzung mit den politischen
+Mitbewerberinnen und Mitbewerbern!
