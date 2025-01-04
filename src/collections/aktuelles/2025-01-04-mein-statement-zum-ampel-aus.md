@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Layout.astro
 title: Mein Statement zum Ampel-Aus
-date: 2024-12-07T22:00:00.000Z
+date: 2024-11-07T23:00:00.000Z
 thumbnail: /assets/aktuelles/images/olaf.jpg
 alt: Truels Reichardt (links) neben Bundeskanzler Olaf Scholz
 ---
