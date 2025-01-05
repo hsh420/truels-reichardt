@@ -3,7 +3,23 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header>
-  <div class="headline-container">
+  <div class="header__banner-container">
+    <a href="/">
+      <img
+        src="/assets/images/Truels_Reichardt_Banner.jpg"
+        alt="Banner Truels Reichardt SPD mit Wahlslogan"
+        class="header__banner"
+      />
+    </a>
+    <div class="sticker">
+      <p>
+        Am <br />23. Februar <br />
+        <span class="sticker__SPD">SPD</span>
+        <br /> wählen!
+      </p>
+    </div>
+  </div>
+  <!-- <div class="headline-container">
     <div class="headline-container__spacing">
       <a href="/">
         <img
@@ -28,7 +44,7 @@ const currentPath = Astro.url.pathname;
         Die Westküste im Herzen. <br />Die Zukunft im Blick.
       </p>
     </div>
-  </div>
+  </div> -->
   <div class="nav">
     <div class="menu-icon">
       <input id="navbar-toggle" name="navbar-toggle" type="checkbox" />
@@ -107,9 +123,22 @@ const currentPath = Astro.url.pathname;
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 178px;
     z-index: 99;
     background-color: var(--white);
+  }
+  .header__banner-container {
+    position: relative;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--red);
+  }
+  .header__banner {
+    height: 140px;
+    width: 375px;
+    object-fit: cover;
   }
   .headline-container {
     display: flex;
@@ -156,6 +185,7 @@ const currentPath = Astro.url.pathname;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 2px solid var(--white);
   }
   .menu_icon {
     position: absolute;
@@ -261,6 +291,26 @@ const currentPath = Astro.url.pathname;
     width: 200px;
     text-align: center;
   }
+  .sticker {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: 140px;
+    height: 140px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    text-align: center;
+    box-shadow: -7px -1px 20px 0 var(--black);
+  }
+  .sticker__SPD {
+    font-weight: 900;
+    font-size: 1.6rem;
+    font-family: "SPD The Sans Bold", sans-serif;
+  }
   @media screen and (min-width: 768px) {
     .rose {
       display: flex;
@@ -272,6 +322,20 @@ const currentPath = Astro.url.pathname;
     }
     .headline-container__text > h2 {
       text-align: right;
+    }
+    .header {
+      height: 198px;
+    }
+    .header__banner-container,
+    .header__banner {
+      height: 160px;
+    }
+    .header__banner {
+      width: 100%;
+      object-fit: contain;
+    }
+    .sticker {
+      display: flex;
     }
   }
   @media screen and (min-width: 1275px) {

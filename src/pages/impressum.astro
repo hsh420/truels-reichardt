@@ -1,7 +1,52 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<main>
-  <p>impressum works!</p>
-</main>
+<Layout title="Impressum | Truels Reichardt, SPD">
+  <main>
+    <h1>Impressum</h1>
+    <p>
+      Angaben gemäß § 5 TMG:
+      <address>
+        Truels Reichardt <br />
+        c/o SPD Nordfriesland<br />
+        Schlossgang 1<br />
+        25813 Husum<br />
+        E-Mail: t.reichardt@spdnordfriesland.de
+      </address>
+    </p>
+    <p>
+      Alle Texte, Fotos und sonstige Gestaltungselemente dieses Internetangebots
+      sind für den Herausgeber urheberrechtlich geschützt, sofern nicht ein/e
+      andere/r Urheber/in oder ein/e andere/r Urheberrechtsinhaber/in angegeben
+      ist. Jede Nutzung dieser Inhalte darf nur mit schriftlicher Zustimmung des
+      Herausgebers erfolgen. Soweit als Urheber/in oder Urheberrechtsinhaber/in
+      ein Dritter angegeben ist, sind keine Nutzungsrechte für eine Übernahme
+      dieser Inhalte für andere Nutzungen erteilt worden.
+    </p>
+    <p>
+      Wir halten auf unseren Internetseiten Links zu anderen Web-Seiten vor bzw.
+      binden entsprechende Inhalte ein. Da wir keinen Einfluss auf die
+      Gestaltung sowie die Inhalte dieser Seiten haben, übernehmen wir für diese
+      auch keine Haftung.
+    </p>
+    <p>
+      Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br />
+      <address>
+        Truels Reichardt<br />
+        c/o SPD Nordfriesland<br />
+        Schlossgang 1<br />
+        25813 Husum<br />
+        E-Mail: t.reichardt@spdnordfriesland.de
+      </address>
+    </p>
+  </main>
+</Layout>
+
+<style>
+  address {
+    max-width: 60ch;
+    margin: 0 auto;
+    padding: 8px 32px;
+  }
+</style>
