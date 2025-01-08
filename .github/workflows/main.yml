@@ -15,13 +15,18 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: npm run build
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy files via SFTP
+        uses: pressidium/lftp-mirror-action@v1
         with:
-          server: ${{ secrets.SERVER }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          protocol: ftps
-          port: 22 # todo replace with your web hosts ftps port
-          local-dir: ./dist/
-          server-dir: html/truelsreichardt/
+          # SFTP credentials
+          host: ${{ secrets.SERVER }}
+          port: 22
+          user: ${{ secrets.USERNAME }}
+          pass: ${{ secrets.PASSWORD }}
+          # lftp settings
+          onlyNewer: true
+          settings: "sftp:auto-confirm=yes"
+          # Mirror command options
+          localDir: "./dist"
+          remoteDir: "/html/truelsreichardt"
+          reverse: true
