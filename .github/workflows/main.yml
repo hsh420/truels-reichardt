@@ -28,6 +28,6 @@ jobs:
           onlyNewer: true
           settings: "sftp:auto-confirm=yes"
           # Mirror command options
-          localDir: "./dist"
-          remoteDir: "/html/truelsreichardt"
+          localDir: "./dist/"
+          remoteDir: "/html/truelsreichardt/"
           reverse: false
