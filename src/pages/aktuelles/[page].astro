@@ -21,9 +21,24 @@ export async function getStaticPaths() {
 
 const { page }: any = Astro.params;
 const { post }: any = Astro.props;
+
+const siteConfig = {
+  title: "Truels Reichardt, SPD",
+  description:
+    "Startseite des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de",
+};
 ---
 
-<Layout title={post.frontmatter.title}>
+<Layout
+  siteConfig={{
+    title: post.frontmatter.title,
+    description: post.compiledContent().substring(0, 500),
+    "og:image": post.frontmatter.thumbnail,
+    "og:url": "https://truels-reichardt.de/" + page,
+  }}
+>
   <main>
     <Article
       text={post.compiledContent()}
