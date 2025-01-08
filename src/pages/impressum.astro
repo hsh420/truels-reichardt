@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Impressum | Truels Reichardt, SPD",
+  description:
+    "Impressum mit rechtlichen Angaben zu Verantwortlichkeiten hinsichtlich des Inhalts auf der Homepage des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de/datenschutz",
+};
 ---
 
-<Layout title="Impressum | Truels Reichardt, SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <h1>Impressum</h1>
     <p>

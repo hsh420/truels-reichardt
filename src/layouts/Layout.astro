@@ -2,21 +2,31 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 interface Props {
-  title: string;
+  siteConfig: {
+    title: string;
+    description: string;
+    "og:image": string;
+    "og:url": string;
+  };
 }
 
-const { title } = Astro.props;
+const { siteConfig } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={siteConfig.description} />
     <meta name="viewport" content="width=device-width" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={siteConfig["og:image"]} />
+    <meta property="og:title" content={siteConfig.title} />
+    <meta property="og:description" content={siteConfig.description} />
+    <meta property="og:url" content={siteConfig["og:url"]} />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{siteConfig.title}</title>
   </head>
   <body>
     <Header />

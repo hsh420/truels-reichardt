@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Transparenz | Truels Reichardt, SPD",
+  description:
+    "Erklärung, wie der SPD-Bundestagskandidat für Nordfriesland und Dithmarschen Nord Truels Reichardt gewährleisten will, durch Offenlegung von Einkommen und Nebentätigkeit sowie die Beibehaltung der gesetzlichen Krankenversicherung, möglichst viel Transparenz an den Tag zu legen.",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de/transparenz",
+};
 ---
 
-<Layout title="Transparenz | Truels Reichardt, SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <div class="wrapper">
       <h1>Transparenz</h1>

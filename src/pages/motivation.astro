@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Meine Motivation - Truels Reichardt | SPD",
+  description:
+    "Darstellung der Motivation zur Kandidatur des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/TR_BTW7.jpg",
+  "og:url": "https://truels-reichardt.de/motivation",
+};
 ---
 
-<Layout title="Meine Motivation - Truels Reichardt | SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <div class="wrapper">
       <h1>Meine Motivation</h1>

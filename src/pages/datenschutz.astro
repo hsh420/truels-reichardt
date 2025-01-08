@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Datenschutzerklärung | Truels Reichardt, SPD",
+  description:
+    "Datenschutzerklärung mit allen relevanten Hinweisen für die Homepage des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de/datenschutz",
+};
 ---
 
-<Layout title="Datenschutzerklärung | Truels Reichardt, SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <p>
       Mit unserer Datenschutzerklärung klären wir Sie darüber auf, auf welche

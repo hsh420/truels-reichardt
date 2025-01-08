@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Über mich | Truels Reichardt, SPD",
+  description:
+    "Darstellung der Persönlichkeit (z.B. Kindheit und Jugend, Hobbies, Ausbildung und Beruf, Kommunalpolitik) des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de/ueber-mich",
+};
 ---
 
-<Layout title="Über mich">
+<Layout siteConfig={siteConfig}>
   <main>
     <h1>Über mich</h1>
     <div class="wrapper">

@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Kontakt | Truels Reichardt, SPD",
+  description:
+    "Angaben zu Kontakt-Möglichkeiten des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de/impressum",
+};
 ---
 
-<Layout title="Kontakt - Truels Reichardt | SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <address>
       <div class="contact-hero">

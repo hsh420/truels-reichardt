@@ -2,9 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Facebook from "../components/Facebook.astro";
 import Instagram from "../components/Instagram.astro";
+
+const siteConfig = {
+  title: "Truels Reichardt | SPD",
+  description:
+    "Startseite des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de",
+};
 ---
 
-<Layout title="Truels Reichardt | SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <h1>
       Liebe Dithmarscherinnen und Dithmarscher,<br />

@@ -1,8 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const siteConfig = {
+  title: "Meine Themen - Truels Reichardt | SPD",
+  description:
+    "Darstellung der Themen wie Investitionsturbo, Westküste, Kliniken, kostenlose Bildung des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Truels_Reichardt_banner.jpg",
+  "og:url": "https://truels-reichardt.de/themen",
+};
 ---
 
-<Layout title="Meine Themen - Truels Reichardt | SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <h1>Meine Themen</h1>
     <div class="wrapper">

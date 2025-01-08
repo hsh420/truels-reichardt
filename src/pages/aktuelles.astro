@@ -10,10 +10,17 @@ const sortedPosts = posts.sort((a, b) => {
     new Date(a.frontmatter.date).valueOf()
   );
 });
-console.log(sortedPosts[0].frontmatter);
+
+const siteConfig = {
+  title: "Aktuelles | Truels Reichart, SPD",
+  description:
+    "Aktuelle Beiträge des SPD-Bundestagskandidaten für Nordfriesland und Dithmarschen Nord Truels Reichardt",
+  "og:image": "/assets/images/Reichardt_Truels.webp",
+  "og:url": "https://truels-reichardt.de/aktuelles",
+};
 ---
 
-<Layout title="Aktuelles | Truels Reichart, SPD">
+<Layout siteConfig={siteConfig}>
   <main>
     <h1>Aktuelles</h1>
     {
