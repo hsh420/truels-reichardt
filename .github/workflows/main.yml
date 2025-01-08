@@ -29,4 +29,4 @@ jobs:
           # Mirror command options
           localDir: "./dist"
           remoteDir: "/html/truelsreichardt"
-          reverse: true
+          reverse: false
