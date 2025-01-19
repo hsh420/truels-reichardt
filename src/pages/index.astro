@@ -14,6 +14,16 @@ const siteConfig = {
 
 <Layout siteConfig={siteConfig}>
   <main>
+    <div class="video-container">
+      <iframe
+        class="video"
+        src="https://www.youtube-nocookie.com/embed/UDVtjQPcJ6I?si=PEDpZHtrvzyWLmSO"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
     <h1>
       Liebe Dithmarscherinnen und Dithmarscher,<br />
       liebe Nordfriesinnen und Nordfriesen,
@@ -50,7 +60,7 @@ const siteConfig = {
         </div>
         <p>
           Als mit der Region verbundener jungen Mensch möchte ich mich als
-          Lobbyist im besten Sinne für den Westküste einsetzen. Nachdem der
+          Lobbyist im besten Sinne für die Westküste einsetzen. Nachdem der
           Wahlkreis Nordfriesland / Dithmarschen-Nord seit Jahrzehnten mit
           überschaubarem Erfolg von Abgeordneten der CDU vertreten wurde, wird
           es nun Zeit für einen Wechsel. Hier gibt es mehr über <a
@@ -99,9 +109,22 @@ const siteConfig = {
     gap: 64px;
   }
   h1 {
-    padding: 16px 8px;
+    padding: 16px 16px;
     max-width: 720px;
     margin: 0 auto;
+    font-size: 1.3rem;
+  }
+  .video-container {
+    max-width: 720px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .video {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
   }
   p {
     color: var(--black);
@@ -139,6 +162,12 @@ const siteConfig = {
       display: flex;
       max-width: 720px;
       margin: 0 auto;
+    }
+    .video {
+      height: 400px;
+    }
+    h1 {
+      font-size: 2rem;
     }
     p {
       max-width: 720px;

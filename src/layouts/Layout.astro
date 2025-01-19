@@ -20,7 +20,10 @@ const { siteConfig } = Astro.props;
     <meta name="description" content={siteConfig.description} />
     <meta name="viewport" content="width=device-width" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={siteConfig["og:image"]} />
+    <meta
+      property="og:image"
+      content={"https://truels-reichardt.de" + siteConfig["og:image"]}
+    />
     <meta property="og:title" content={siteConfig.title} />
     <meta property="og:description" content={siteConfig.description} />
     <meta property="og:url" content={siteConfig["og:url"]} />
@@ -34,6 +37,23 @@ const { siteConfig } = Astro.props;
       <slot />
     </div>
     <Footer />
+    <div class="consent">
+      <div class="consent__action-container">
+        <h2>Datenschutz</h2>
+        <p>
+          Mit dem Besuch meiner Website erklären Sie sich mit der
+          <a href="/datenschutz" class="link">Datenschutzerklärung</a> einverstanden.
+          <br />
+          Informationen zu Verantwortlichkeiten erhalten Sie im <a
+            href="/impressum"
+            class="link">Impressum</a
+          >.
+        </p>
+        <div class="consent__btn-container">
+          <button class="consent__btn" id="consent">Bestätigen</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 <style is:global>
@@ -76,6 +96,53 @@ const { siteConfig } = Astro.props;
     max-width: 60ch;
     margin: 0 auto;
   }
+  .consent {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(101, 100, 97, 0.5);
+    color: var(--white);
+    display: none;
+  }
+  .consent__action-container {
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 64px;
+  }
+  .consent__action-container > p {
+    padding: 24px;
+  }
+  .link {
+    color: var(--white);
+  }
+  .consent__btn-container {
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+  .consent__btn {
+    background-color: var(--red);
+    padding: 12px;
+    font-size: 1.2rem;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-alternative);
+    border-radius: 16px;
+    transition: all 250ms;
+  }
+  .consent__btn:hover {
+    background-color: var(--white);
+    color: var(--red);
+  }
   @media screen and (min-width: 768px) {
     p {
       font-size: 1.2rem;
@@ -108,3 +175,27 @@ const { siteConfig } = Astro.props;
     }
   }
 </style>
+
+<script is:inline>
+  const consentEl = document.querySelector(".consent");
+  const consentBtn = document.getElementById("consent");
+
+  let consentByUser = false;
+
+  consentBtn.addEventListener("click", () => {
+    consentEl.style.display = "none";
+    localStorage.setItem("consent", true);
+  });
+
+  function checkConsent() {
+    consentByUser = localStorage.getItem("consent");
+    if (
+      !consentByUser &&
+      !location.href.includes("/datenschutz") &&
+      !location.href.includes("/impressum")
+    ) {
+      consentEl.style.display = "block";
+    }
+  }
+  checkConsent();
+</script>
