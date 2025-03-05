@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Layout.astro
 title: Wahl in den Bundestag
-date: 2025-03-02T20:58:00.000Z
+date: 2025-03-02T11:08:00.000Z
 thumbnail: /assets/aktuelles/images/27.01.25-kranzniederlegung.png
 alt: Truels Reichardt im Bild
 ---
